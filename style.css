@@ -39,10 +39,12 @@ h1,h2,h3,h4,h5,h6,h7 {
   padding: 1rem;
 }
 
-.card {
+.card, a.clear {
+  text-decoration: none;
   background: var(--component, #e0e0e0);
   color: var(--component-on, black);
-  transition: all ease-in-out .5s;
+  transition: border ease-in-out .5s;
+  border-left: 0;
 }
 
 .card .container {
@@ -64,6 +66,38 @@ h1,h2,h3,h4,h5,h6,h7 {
   background-color: rgba(0,0,0,15%);
 }
 
-.card:hover {
+.hover:hover {
   border-left: solid black 7px;
+}
+
+a.clear {
+  -webkit-tap-highlight-color: transparent;
+}
+
+p {
+  margin-bottom: 2.5rem;
+}
+
+a {
+  color: var(--accent, blue);
+  text-decoration-color: var(--accent, blue);
+}
+
+.button {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: .01rem;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+ol > li {
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  background-color: var(--highlight);
+  padding: 1.5rem;
 }
